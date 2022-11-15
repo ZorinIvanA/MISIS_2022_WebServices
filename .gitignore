@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/MISIS_2022_WebServices/bin/Debug/netcoreapp3.1
+/MISIS_2022_WebServices/obj
+/MISIS_2022_WebServices/json.json
