@@ -27,7 +27,7 @@ namespace MISIS_2022_WebServices.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert([FromForm] BookModel model)
+        public IActionResult Insert([FromBody] BookModel model)
         {
             return StatusCode(StatusCodes.Status201Created,
                 _booksRepository.Insert(model.ToDomainObject()));
@@ -36,6 +36,7 @@ namespace MISIS_2022_WebServices.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute] Guid id)
         {
+            _booksRepository.Delete(id);
             return StatusCode(StatusCodes.Status200OK);
         }
 
