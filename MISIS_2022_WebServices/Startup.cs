@@ -28,6 +28,7 @@ namespace MISIS_2022_WebServices
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IBooksRepository, BooksRepository>();
+            services.AddTransient<IOrdersRepository, OrdersRepository>();
 
             services.AddControllers();
         }
